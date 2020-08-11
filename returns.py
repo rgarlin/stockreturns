@@ -1,5 +1,8 @@
 #!/usr/local/bin/python3.8
 
+## take a file of stock annual percent gains 
+## and calculates the dollar gain with a start value 
+## of 20,000 
 
 stock_list = []
 f = open('hdper.txt', 'r')
