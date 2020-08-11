@@ -1,4 +1,11 @@
 #!/usr/local/bin/python3.8
+## Calculates the dollars and percent gain of a stock
+## pass the ticker symblol, amount of shares and 
+## initial cost per share. The write all the data to
+## a html file. 
+
+
+
 import yfinance as yf
 import pandas as pd
 import openpyxl
@@ -59,21 +66,19 @@ atvilst = []
 shwlst = []
 
 
-amazon = Stock('amzn', 1,2760.69)
-microsoft = Stock('msft', 15,198.3)
-apple = Stock('aapl', 66, 152.20)
-msftbg = Stock('msft', 102, 97.70)
+amazon = Stock('amzn', 10,2760.69)
+microsoft = Stock('msft', 10,198.3)
+apple = Stock('aapl', 10, 152.20)
+msftbg = Stock('msft', 10, 97.70)
 googl = Stock('googl', 10, 1024.02)
-cmg = Stock('cmg', 35,757.6)
-visa = Stock('v',164,183.61)
-nvda = Stock('nvda',110,358.20)
-atvi = Stock('atvi',465,77.21)
-shw = Stock('shw',65,621.20)
+cmg = Stock('cmg', 10,757.6)
+visa = Stock('v',10,183.61)
+nvda = Stock('nvda',10,358.20)
+atvi = Stock('atvi',10,77.21)
+shw = Stock('shw',10,621.20)
 
 values(amznlst,amazon)
 values(msftlst,microsoft)
-
-
 values(applelst,apple)
 values(msftbglst,msftbg)
 values(googllst,googl)
@@ -141,19 +146,3 @@ with open("index.html", "w") as text_file:
     text_file.write('</tr>\n')
     text_file.write('</table>\n')
     text_file.write('<br>\n')
-
-
-    ##print("<td> Stock </td>" two_ <td> Shares </td> <td>&emsp;</td> <td>&emsp;</td> <td> Cost per Share </td><td>&emsp;</td> <td>&emsp;</td> <td>Total Value</td>",file=text_file)
-    ##print('</tr>', file=text_file)
-    ##print('<tr>', file=text_file)
-    ##print("<td> Amazon </td>", file=text_file)
-    ##print("<td>&emsp;</td>", file=text_file)
-    ##print("<td>&emsp;</td>", file=text_file)
-    ##print("<td> ${} </td> <td>&emsp;</td> <td>&emsp;</td> <td> {}% </td>".format(round(amzn_cur_gain, 2),round(amzn_per_gain, 2)), file=text_file)
-    ##print('<td> &emsp;</td> <td>&emsp;</td> <td>${:,.2f} </td>'.format(amzn_tot_val), file=text_file)
-    ##print('</tr>', file=text_file)
-    ##print('</table>', file=text_file)
-    ##print('<br>', file=text_file)
-    ##print('<br>', file=text_file)
-tickerlst = [apple, msftbg, googl]
-
