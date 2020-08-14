@@ -3,9 +3,14 @@
 ## take a file of stock annual percent gains 
 ## and calculates the dollar gain with a start value 
 ## of 20,000 
+import argparse
+parser = argparse.ArgumentParser(description='Input file names: file1.csv')
+parser.add_argument('file1')
+
+args = parser.parse_args()
 
 stock_list = []
-f = open('hdper.txt', 'r')
+f = open(args.file1, 'r')
 for line in f:
     stock_list.append(float(line)) 
 print(len(stock_list))
